@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<!-- saved from url=(0052)https://getbootstrap.com/docs/4.0/examples/carousel/ -->
+<html lang="en">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="https://getbootstrap.com/docs/4.0/assets/img/favicons/favicon.ico">
+
+    <title>Prayer Time Table</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.0/examples/carousel/">
+    <link href="assets/bootstrap.min.css" rel="stylesheet">
+    <link href="assets/carousel.css" rel="stylesheet">
+
+    <script src="Adhan.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data-10-year-range.min.js"></script>
+
+
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-md navbar-custom fixed-top">
+            <marquee behavior="scroll" direction="left" scrollamount="100" scrolldelay="1000">Sandiaga mengungkapkan ada beberapa strategi yang disiapkan menyambut kebangkitan pariwisata, yakni inovasi produk, destinasi wisata sesuai tren, adaptasi, serta kolaborasi. Namun, dia bakal memprioritaskan pariwisata bagi wisatawan dalam
+                negeri dulu. "Kemudian adaptasi dengan tetap disiplin protokol kesehatan dengan mendorong destinasi bersertifikasi CHSE (clean, health, safety, dan environmental sustainability)," paparnya.</marquee>
+        </nav>
+    </header>
+
+    <main role="main">
+        <div id="myCarousel" class="carousel slide carousel-fade" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1" class=""></li>
+                <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+            </ol>
+            <div class="carousel-inner">
+
+                <div class="carousel-item active" style="background-image: url('assets/img/malacca-straits-mosque-sea-malaysia.jpg');background-size: cover;">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+
+                            <h1>إِيَّاكَ نَعْبُدُ وَإِيَّاكَ نَسْتَعِينُ</h1>
+                            <p>Hanya Engkaulah yang kami sembah, dan hanya kepada Engkaulah kami meminta pertolongan.</p>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-image: url(assets/img/5bd361cc9fda5-wallpaper-preview.jpg);background-size: cover;">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1>Another example headline.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.0/examples/carousel/#" role="button">Learn more</a></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="carousel-item" style="background-image: url(assets/img/189416.jpg);background-size: cover;">
+                    <div class="container">
+                        <div class="carousel-caption text-left">
+                            <h1>One more for good measure.</h1>
+                            <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+                            <p><a class="btn btn-lg btn-primary" href="https://getbootstrap.com/docs/4.0/examples/carousel/#" role="button">Browse gallery</a></p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--
+            <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#myCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>-->
+        </div>
+
+        <div class="row timetable">
+            <div class="col-lg-4 currents">
+                <h2 id="current-date"></h2>
+                <h1 id="current-time"></h1>
+                <h2 id="next-prayer"></h2>
+                <h2 id="current-prayer"></h2>
+
+            </div>
+
+            <div class="col-lg-8">
+                <div class="row">
+
+                    <div id="fajr" class="col-md-2 prayer-times">
+                        <h2 id="title">Subuh</h2>
+                        <h1 id="hour">04</h1>
+                        <h1 id="minute">48</h1>
+                    </div>
+                    <div id="dhuhr" class="col-md-2  prayer-times ">
+                        <h2 id="title">Duhur</h2>
+                        <h1 id="hour">04</h1>
+                        <h1 id="minute">48</h1>
+                    </div>
+                    <div id="asr" class="col-md-2  prayer-times">
+                        <h2 id="title">Ashar</h2>
+                        <h1 id="hour">04</h1>
+                        <h1 id="minute">48</h1>
+                    </div>
+                    <div id="maghrib" class="col-md-2 prayer-times">
+                        <h2 id="title">Maghrib</h2>
+                        <h1 id="hour">04</h1>
+                        <h1 id="minute">48</h1>
+                    </div>
+                    <div id="isha" class="col-md-2 prayer-times">
+                        <h2 id="title">Isya</h2>
+                        <h1 id="hour">04</h1>
+                        <h1 id="minute">48</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="assets/jquery-slim.min.js"></script>
+    <script src="assets/popper.min.js"></script>
+    <script src="assets/bootstrap.min.js"></script>
+    <script src="assets/holder.min.js.download"></script>
+
+    <script src="Adhan.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment-with-locales.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.28/moment-timezone-with-data-10-year-range.min.js"></script>
+    <script>
+        function updatetime() {
+
+            setTimeout(function() {
+
+                var readabletime = moment().tz('Asia/Jakarta').format('HH:mm:ss');
+                var readabledate = moment().tz('Asia/Jakarta').format('Do MMMM YYYY');
+
+                $("#current-time").text(readabletime);
+                $("#current-date").text(readabledate);
+                updateCurrentPrayer();
+                updatetime();
+            }, 1000);
+        }
+
+        updatetime();
+
+        var prayers = ["fajr", "dhuhr", "asr", "maghrib", "isha", "none", "sunrise"];
+        var prayers_id = ["Subuh", "Dhuhur", "Ashar", "Maghrib", "Isya", "", ""];
+
+        function updateCurrentPrayer() {
+
+            const coordinates = new adhan.Coordinates(-6.617243604109477, 106.79955767064237);
+            var params = adhan.CalculationMethod.MuslimWorldLeague();
+            params.fajrAngle = 20;
+            params.ishaAngle = 18;
+
+
+            var strdate = moment().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm');
+
+            const date = new Date(strdate);
+            var prayerTimes = new adhan.PrayerTimes(coordinates, date, params);
+
+            $("#current-prayer").text(prayerTimes.currentPrayer());
+
+
+            for (var i = 0; i < prayers.length; i++) {
+
+                $("#" + prayers[i] + " #hour").text(moment(prayerTimes[prayers[i]]).tz('Asia/Jakarta').format('HH'));
+                $("#" + prayers[i] + " #minute").text(moment(prayerTimes[prayers[i]]).tz('Asia/Jakarta').format('mm'));
+
+                //tandai waktu sholat sekarang
+                if (prayerTimes.currentPrayer() == prayers[i]) {
+                    $("#" + prayers[i]).addClass("current-prayer-time");
+
+                    //hitung berapa lama ke waktu sholat berikutnya
+                    var now = moment(); //todays date
+                    var now_readble = moment().tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm'); //todays date
+                    if (i => 4) {
+                        var currentHour = moment().tz('Asia/Jakarta').format('HH');
+                        var isyaHour = moment(prayerTimes[prayers[4]]).tz('Asia/Jakarta').format('HH');
+
+                        if (currentHour <= 23 && currentHour > isyaHour) {
+                            console.log("satu");
+                            var strnextdate = moment().add(1, 'days').tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm');
+                            const nextdate = new Date(strnextdate);
+                            var nextprayerTimes = new adhan.PrayerTimes(coordinates, nextdate, params);
+                            var end = moment(nextprayerTimes[prayers[0]]);
+                        } else {
+                            console.log("dua");
+                            var end = moment(prayerTimes[prayers[0]]);
+                        }
+                    } else {
+                        console.log("tiga");
+                        var end = moment(prayerTimes[prayers[i + 1]]);
+                    }
+
+                    var end_readable = moment(prayerTimes[prayers[i + 1]]).tz('Asia/Jakarta').format('YYYY-MM-DD HH:mm');
+                    var duration = moment.duration(now.diff(end));
+                    var hourleft = -(duration.hours());
+                    var minuteleft = -(duration.minutes());
+                    var secondleft = -(duration.seconds());
+                    var countdown = hourleft + ":" + minuteleft + ":" + secondleft;
+
+                    if (i => 4) {
+                        $("#next-prayer").text(prayers_id[0] + " " + hourleft + " jam " + minuteleft + " menit lagi");
+                    } else {
+                        $("#next-prayer").text(prayers_id[i + 1] + " " + hourleft + " jam " + minuteleft + " menit lagi");
+                    }
+
+                } else {
+                    $("#" + prayers[i]).removeClass("current-prayer-time");
+                }
+            }
+
+        }
+
+
+
+        function prayerName(prayer) {
+            if (prayer == adhan.Prayer.Fajr) {
+                return "Fajr";
+            } else if (prayer == adhan.Prayer.Sunrise) {
+                return "Sunriserr";
+            } else if (prayer == adhan.Prayer.Dhuhr) {
+                return "Dhuhr";
+            } else if (prayer == adhan.Prayer.Asr) {
+                return "Asr";
+            } else if (prayer == adhan.Prayer.Maghrib) {
+                return "Maghrib";
+            } else if (prayer == adhan.Prayer.Isha) {
+                return "Isha";
+            } else if (prayer == adhan.Prayer.None) {
+                return "None";
+            }
+        }
+    </script>
